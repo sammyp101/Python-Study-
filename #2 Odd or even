@@ -1,0 +1,16 @@
+# Ask the user for two numbers: one number 
+# to check (call it num) and one number to divide by (check).
+# If check divides evenly into num, tell that to the user. 
+# If not, print a different appropriate message.
+
+Question = input ("Give me a number to check: ")
+Question2= input ("Give me a number to divide: ")
+
+num = int(Question)
+check = int(Question2)
+
+
+if num%check == 0:
+    print("They divide evenly")
+else:
+    print("They doesn't divide evenly")
