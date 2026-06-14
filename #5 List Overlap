@@ -1,0 +1,39 @@
+#Create a program that finds the common elements between two randomly generated lists of different sizes, while ensuring no duplicates. 
+from random import*
+a = []
+b=[]
+c=[]
+
+index=0
+size_a = randint(10,50)
+size_b = randint(10,50)
+
+while index <size_a:
+        num = int(random()*100)
+        if num not in a:
+             a.append(num)
+             index+=1
+ 
+index=0
+
+while index <size_b:
+        number = int(random()*100)
+        if number not in b:
+              b.append(number)
+              index +=1
+
+a.sort()
+b.sort()
+for num in a:
+    if num in b:
+         c.append(num)
+
+
+
+print(a)
+print("{0} numbers printed".format(size_a))
+print(b)
+print("{0} numbers printed".format(size_b))
+c.sort()
+print(c)
+print("Total common number: {0}" .format(len(c)))
