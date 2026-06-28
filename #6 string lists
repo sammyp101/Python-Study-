@@ -1,0 +1,21 @@
+# Ask the user for a string and print out 
+# whether this string is a palindrome or not. 
+# (A palindrome is a string that reads the same forwards 
+#  and backwards.)
+
+a=input("Type Anything: ")
+   
+d=len(a)
+e=int((d/2))
+
+if d%2==0:
+    if a[0:e] == a[e:][::-1]:
+        print("It is palindroma")
+    else: 
+        print("It is not palindroma")
+
+if d%2 !=0:
+    if a[0:e] == a[e+1:][::-1]:
+        print("It is palindroma")
+    else:
+        print("It is not")
