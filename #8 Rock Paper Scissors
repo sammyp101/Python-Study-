@@ -1,0 +1,36 @@
+# Make a two-player Rock-Paper-Scissors game.
+# (Hint: Ask for player plays (using input), 
+# compare them, print out a message of congratulations
+# to the winner,
+# and ask if the players want to start a new game)
+
+
+while True:
+    while True:
+        a= input("Player 1 , please type Rock or Paper or Scissors:").lower()
+        b= input("Player 2, please type Rock or Paper or Scissors:").lower()
+        Answer = ["rock", "paper", "scissors"]
+        if a not in Answer or b not in Answer:
+            print("Please type again!")
+        else: 
+            break
+
+    rules = {
+    "rock" : "scissors", "scissors": "paper", "paper" : "rock"
+    }
+
+    if a== b:
+        print("It is a tie!")
+
+    elif a==rules[b]:
+        print("Player 2 is a winner!")
+    else:
+        print("Player 1 is a winner!")
+
+
+    reply = input("Would you like to restart the game?").lower()
+    if reply == "yes":
+        continue
+    else:
+        print("game over")
+        break
